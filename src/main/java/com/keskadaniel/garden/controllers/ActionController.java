@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.keskadaniel.garden.models.ActionEntity;
 import com.keskadaniel.garden.models.PlantEntity;
 import com.keskadaniel.garden.models.forms.ActionForm;
 import com.keskadaniel.garden.models.services.ActionService;
@@ -54,6 +55,19 @@ public class ActionController {
 		actionService.addAction(actionForm, id);
 		return "redirect:/plant/"+id;
 	}
+	
+	@PostMapping("/deleteaction/{id}")
+	public String deleteAction(@PathVariable("id") int id) {
+		
+		if(!userService.isLogin()) {
+			return "redirect:/";
+		}
+		
+		actionService.deleteAction(id); 
+		
+		return "redirect:/plant/"+id;
+	}
+	
 	
 	@GetMapping("action/{id}")
 	public String showActions (@PathVariable("id") int id, Model model) {

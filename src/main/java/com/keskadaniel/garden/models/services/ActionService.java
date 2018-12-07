@@ -42,6 +42,14 @@ public class ActionService {
 		
 		actionRepository.save(actionEntity);
 	}
+	
+public void deleteAction(int id) {
+	
+    ActionEntity actionEntity = new ActionEntity();
+    actionEntity.setId(id);
+		
+		actionRepository.delete(actionEntity);
+	}
 
 	public Iterable<ActionEntity> getAllActionsByUser(int id) {
 		

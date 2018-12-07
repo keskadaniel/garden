@@ -10,6 +10,7 @@ import com.keskadaniel.garden.models.PlantEntity;
 public interface ActionRepository extends CrudRepository<ActionEntity, Integer> {
 
 	Iterable<ActionEntity> findByUserId(int userId);
+	Iterable<ActionEntity> findById(int id);
 	Iterable<ActionEntity> findByUserIdAndMonth(int userId, int month);
 	Iterable<ActionEntity> findByMonth(int month);
 	Iterable<ActionEntity> findAll();

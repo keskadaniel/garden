@@ -46,7 +46,8 @@
 				th:each="action : ${actions}">
 					<h2 th:text="${action.name}"></h2> <br>
 					<h2 th:text="${action.description}"></h2> <br>
-				</a>
+					<!--new button-->
+					<button type="submit" class="btn btn-dark"th:href="@{/deleteaction/{id}(id=${action.getId()})}">Delete!</button>
 
 			</div>
 		</div>
