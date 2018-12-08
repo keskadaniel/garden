@@ -33,10 +33,7 @@ public class ActionController {
 	@GetMapping("/addaction/{id}")
 	public String addAction(Model model, @PathVariable("id") int id ) {
 
-//		Optional<PlantEntity> plantEntity = plantService.getPlantById(id);
-//		if (plantEntity.isPresent()) {
-//			model.addAttribute("plant", plantEntity.get());
-//		}
+
 		model.addAttribute("user", userService.getUserData());
 		model.addAttribute("plant", plantService.getPlantById(id).get());
 		model.addAttribute("actionForm", new ActionForm());

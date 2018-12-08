@@ -46,8 +46,7 @@
 				th:each="action : ${actions}">
 					<h2 th:text="${action.name}"></h2> <br>
 					<h2 th:text="${action.description}"></h2> <br>
-					<!--new button
-					<button class="btn btn-dark" th:action="'/deleteAction/'+${action.getId()}">Delete!</button>-->
+					
 <br>
 					<form action="#" th:action="'/deleteaction/'+${action.getId()}" th:method="post" >
  					 <input type='hidden' />

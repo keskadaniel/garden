@@ -13,11 +13,34 @@ body {
 	margin: 0;
 }
 
+a {
+	background-color: #00cc99;
+	margin: 0;
+	text-align: center;
+	
+}
+
+strong {
+	background-color: #00cc99;
+	margin: 0;
+	text-align: center;
+	
+}
+
+body {
+	background-color: #00cc99;
+	margin: 0;
+}
+
 h1 {
 	text-align: center;
 }
 
 h2 {
+	text-align: center;
+}
+
+form {
 	text-align: center;
 }
 
